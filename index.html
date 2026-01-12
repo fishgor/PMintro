@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 数据产品专家 | 个人作品集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+        }
+        transition: all 0.3s ease;
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 flex justify-between items-center glass-card">
+        <div class="text-2xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent">
+            AI Portfolio
+        </div>
+        <div class="flex items-center space-x-6">
+            <a href="#about" class="hover:text-primary transition">关于</a>
+            <a href="#projects" class="hover:text-primary transition">作品</a>
+            <a href="#contact" class="hover:text-primary transition">联系</a>
+            <button id="theme-toggle" class="p-2 rounded-full bg-slate-200 dark:bg-slate-800 text-yellow-500 dark:text-blue-400">
+                <i class="fas fa-moon dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:block"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="about" class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
+        <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-primary to-blue-400 mb-8 flex items-center justify-center text-4xl text-white shadow-lg">
+            <i class="fas fa-robot"></i>
+        </div>
+        <h1 class="text-5xl font-extrabold mb-4">你好，我是 <span class="text-primary">AI 数据产品专家</span></h1>
+        <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+            专注构建基于大模型的智能分析系统，将复杂的数据转化为可感知的业务洞察。擅长结合 NLP 与数据可视化打造行业领先的产品矩阵。
+        </p>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-100 dark:bg-slate-800/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">核心产品系统</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 shadow-xl hover:translate-y-[-10px] transition-transform">
+                    <div class="text-primary text-3xl mb-4"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="text-xl font-bold mb-2">品牌社媒营销监测系统</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">利用 AI 情感分析与趋势识别，实时追踪全网品牌声量，为营销决策提供数据支撑。</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 shadow-xl hover:translate-y-[-10px] transition-transform">
+                    <div class="text-pink-500 text-3xl mb-4"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="text-xl font-bold mb-2">社媒活动监测系统</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">针对营销活动进行全周期复盘，自动生成活动效果报告，精准计算 ROI 与传播路径。</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-slate-800 shadow-xl hover:translate-y-[-10px] transition-transform">
+                    <div class="text-emerald-500 text-3xl mb-4"><i class="fas fa-comment-dots"></i></div>
+                    <h3 class="text-xl font-bold mb-2">AI 智能问数系统</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">基于 LLM 的自然语言交互界面，让非技术人员通过对话即可直接获取数据可视化报表。</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 max-w-4xl mx-auto px-6">
+        <div class="glass-card p-8 rounded-3xl shadow-2xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">联系我</h2>
+            <form id="contact-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="您的姓名" class="w-full p-4 rounded-xl bg-slate-200 dark:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-primary transition" required>
+                    <input type="email" placeholder="您的邮箱" class="w-full p-4 rounded-xl bg-slate-200 dark:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-primary transition" required>
+                </div>
+                <textarea rows="4" placeholder="您的合作意向..." class="w-full p-4 rounded-xl bg-slate-200 dark:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-primary transition" required></textarea>
+                <button type="submit" class="w-full py-4 bg-primary text-white font-bold rounded-xl hover:opacity-90 transition shadow-lg">发送消息</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-slate-500 text-sm">
+        <p>© 2026 AI Portfolio. Built with Gemini & Tailwind CSS</p>
+    </footer>
+
+    <script>
+        // 深色模式切换
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            localStorage.setItem('theme', htmlElement.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // 检查本地存储
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        }
+
+        // 表单提交模拟
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('感谢您的联系！您的消息已模拟发送。');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
