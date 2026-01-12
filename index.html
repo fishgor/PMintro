@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 数据产品专家 | 数字化转型先行者</title>
+    <title>Fishgor | AI数据产品专家作品集</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -12,152 +12,190 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: { primary: '#4F46E5', accent: '#06B6D4' }
+                    colors: { primary: '#6366f1', accent: '#06B6D4' }
                 }
             }
         }
     </script>
     <style>
-        .gradient-bg {
-            background: radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.1) 0%, transparent 50%);
-        }
         .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2); }
         .dark .glass { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%); }
     </style>
 </head>
-<body class="bg-white text-slate-900 dark:bg-[#0b1120] dark:text-slate-100 transition-colors duration-500">
-
-    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
-        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[120px]"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accent/10 blur-[120px]"></div>
-    </div>
+<body class="bg-slate-50 text-slate-900 dark:bg-[#0b1120] dark:text-slate-100 transition-colors duration-500">
 
     <nav class="fixed w-full z-50 top-0 px-8 py-4 flex justify-between items-center glass">
-        <div class="text-xl font-black tracking-tighter italic">
-            <span class="text-primary">DATA</span>.AI
+        <div class="text-xl font-black tracking-tighter">
+            <span class="text-primary">FISH</span>GOR
         </div>
-        <div class="hidden md:flex items-center space-x-8 text-sm font-medium uppercase tracking-widest">
-            <a href="#about" class="hover:text-primary transition">About</a>
-            <a href="#projects" class="hover:text-primary transition">Products</a>
-            <a href="#skills" class="hover:text-primary transition">Skills</a>
-            <button id="theme-toggle" class="text-xl hover:scale-110 transition-transform text-orange-400 dark:text-indigo-400">
+        <div class="flex items-center space-x-6 text-sm font-medium">
+            <a href="#about" class="hover:text-primary transition hidden md:block">关于我</a>
+            <a href="#projects" class="hover:text-primary transition hidden md:block">核心项目</a>
+            <a href="#experience" class="hover:text-primary transition hidden md:block">经历</a>
+            <button id="theme-toggle" class="text-xl p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition">
                 <i class="fas fa-circle-half-stroke"></i>
             </button>
         </div>
     </nav>
 
-    <section id="about" class="min-h-screen flex items-center justify-center px-6 pt-20">
-        <div class="text-center" data-aos="zoom-out" data-aos-duration="1000">
-            <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold mb-4 uppercase tracking-widest">Digital Product Expert</span>
-            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight">探索数据的<br><span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AI 边界</span></h1>
-            <p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                利用大语言模型与深度学习技术，将海量社交数据转化为商业增长引擎。
+    <section id="about" class="min-h-screen flex items-center justify-center px-6 pt-20 hero-gradient">
+        <div class="max-w-4xl text-center" data-aos="fade-up">
+            <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 uppercase tracking-[0.2em]">Data Product & AI Expert</span>
+            <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+                兼具数据运营与<br><span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AI产品落地经验</span>
+            </h1>
+            <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">
+                [cite: 3, 4] 精通数据分析指标体系构建、数据价值挖掘及产品化落地全流程。熟悉政务热线、社媒等多类型数据的采集与分析，具备 Python、AI打标实操经验，致力于从0到1搭建标准化需求服务体系。
             </p>
-            <div class="flex justify-center space-x-4">
-                <a href="#projects" class="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-primary/30 hover:translate-y-[-2px] transition">查看作品</a>
-                <a href="#contact" class="px-8 py-4 border border-slate-200 dark:border-slate-700 rounded-full font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition">联系我</a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 text-sm">
+                    <i class="fas fa-check-circle text-primary mr-2"></i> 公共数据运营 [cite: 3]
+                </div>
+                <div class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 text-sm">
+                    <i class="fas fa-check-circle text-primary mr-2"></i> AI 智能问数校准 
+                </div>
+                <div class="px-4 py-2 bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 text-sm">
+                    <i class="fas fa-check-circle text-primary mr-2"></i> 数据产权登记合规 [cite: 6]
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-            <div>
-                <h2 class="text-4xl font-bold mb-4">核心系统展示</h2>
-                <p class="text-slate-500">Core AI Systems Portfolio</p>
-            </div>
-            <div class="h-[1px] flex-grow bg-slate-200 dark:bg-slate-800 mx-8 hidden md:block"></div>
-        </div>
-
+    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-16 text-center" data-aos="fade-up">核心产品与项目经历</h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div class="group p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-800/40 border border-transparent hover:border-primary/30 transition-all duration-500" data-aos="fade-up">
-                <div class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:rotate-12 transition-transform shadow-sm">
-                    <i class="fas fa-satellite-dish text-primary"></i>
+            
+            <div class="group p-8 rounded-[2.5rem] bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500" data-aos="fade-up">
+                <div class="w-14 h-14 bg-primary/10 text-primary rounded-2xl flex items-center justify-center text-2xl mb-8">
+                    <i class="fas fa-headset"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">品牌社媒营销监测</h3>
+                <h3 class="text-2xl font-bold mb-4">12345热线 AI 应用项目</h3>
                 <p class="text-slate-500 dark:text-slate-400 mb-6 text-sm leading-relaxed">
-                    全网实时抓取品牌提及，基于定制化 NLP 模型实现情感极性分析。支持竞品对比与突发舆情预警，识别率达 98.5%。
+                     搭建工单考核指标体系，通过优化问数提示词与语义知识，将AI问数一次通过率从 30% 提升至 90%。助力重复诉求识别准确率提升 7%，显著压减报告耗时。
                 </p>
-                <div class="flex gap-2">
-                    <span class="text-[10px] px-2 py-1 bg-primary/10 text-primary rounded">NLP</span>
-                    <span class="text-[10px] px-2 py-1 bg-primary/10 text-primary rounded">Real-time DB</span>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-[10px] px-2 py-1 bg-primary/10 text-primary rounded">AI 问数测试</span>
+                    <span class="text-[10px] px-2 py-1 bg-primary/10 text-primary rounded">指标体系</span>
                 </div>
             </div>
 
-            <div class="group p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-800/40 border border-transparent hover:border-accent/30 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:rotate-12 transition-transform shadow-sm">
-                    <i class="fas fa-bolt text-accent"></i>
+            <div class="group p-8 rounded-[2.5rem] bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-2xl mb-8">
+                    <i class="fas fa-chart-pie"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">社媒活动监测系统</h3>
+                <h3 class="text-2xl font-bold mb-4">社媒营销洞察平台</h3>
                 <p class="text-slate-500 dark:text-slate-400 mb-6 text-sm leading-relaxed">
-                    针对 KOL/KOC 传播链路进行深度追踪。自动分析传播层级及漏斗转化，为下一次投放计划提供 AI 辅助预算建议。
+                     负责“品牌监测”与“活动监测”产品设计，累计服务 40+ 头部客户。通过自动化分析报告将交付时间缩短 50%，项目年均业绩突破 500 万。
                 </p>
-                <div class="flex gap-2">
-                    <span class="text-[10px] px-2 py-1 bg-accent/10 text-accent rounded">Graph Theory</span>
-                    <span class="text-[10px] px-2 py-1 bg-accent/10 text-accent rounded">KOL Tracking</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[10px] px-2 py-1 bg-accent/10 text-accent rounded">品牌力模型</span>
+                    <span class="text-[10px] px-2 py-1 bg-accent/10 text-accent rounded">自动化报告</span>
                 </div>
             </div>
 
-            <div class="group p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-800/40 border border-transparent hover:border-indigo-400/30 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-14 h-14 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:rotate-12 transition-transform shadow-sm">
-                    <i class="fas fa-brain text-indigo-400"></i>
+            <div class="group p-8 rounded-[2.5rem] bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-indigo-500/10 text-indigo-500 rounded-2xl flex items-center justify-center text-2xl mb-8">
+                    <i class="fas fa-shield-halved"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-4">AI 智能问数系统</h3>
+                <h3 class="text-2xl font-bold mb-4">数据要素合规与登记</h3>
                 <p class="text-slate-500 dark:text-slate-400 mb-6 text-sm leading-relaxed">
-                    打通私有企业知识库，用户通过“人话”即可生成 SQL 并自动绘制 ECharts。让业务人员秒变数据科学家。
+                     主导“消费创新商机洞察”产品合规上市，完成数据脱敏、材料编制及评审对接。顺利完成数据产权登记，并推动公共数据授权运营落地。
                 </p>
-                <div class="flex gap-2">
-                    <span class="text-[10px] px-2 py-1 bg-indigo-400/10 text-indigo-400 rounded">LLM/RAG</span>
-                    <span class="text-[10px] px-2 py-1 bg-indigo-400/10 text-indigo-400 rounded">Text-to-SQL</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[10px] px-2 py-1 bg-indigo-500/10 text-indigo-500 rounded">合规审计</span>
+                    <span class="text-[10px] px-2 py-1 bg-indigo-500/10 text-indigo-500 rounded">要素流通</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 bg-slate-100 dark:bg-slate-900/30 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 text-center">职业历程</h2>
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l-2 border-primary/30" data-aos="fade-left">
+                    <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
+                    <span class="text-sm font-bold text-primary">2025/03 - 至今 </span>
+                    <h4 class="text-xl font-bold mt-1">数据分析师（数据组负责人） | 广东某数据商企业</h4>
+                    <p class="text-slate-500 mt-2 text-sm leading-relaxed">
+                        主导 AI 数据项目全流程，负责需求对接、方案设计及产权登记。通过完善语义知识，持续提升数据 AI 应用准确率。
+                    </p>
+                </div>
+                <div class="relative pl-8 border-l-2 border-primary/30" data-aos="fade-left" data-aos-delay="100">
+                    <div class="absolute w-4 h-4 bg-slate-300 dark:bg-slate-700 rounded-full -left-[9px] top-1"></div>
+                    <span class="text-sm font-bold text-slate-500">2018/06 - 2024/09 </span>
+                    <h4 class="text-xl font-bold mt-1">产品经理 / 助理 | 广东某社媒营销数据洞察企业</h4>
+                    <p class="text-slate-500 mt-2 text-sm">
+                        负责社媒监测产品迭代。获“最佳服务团队奖”，系统被客户 12 个事业部深度使用，报告直报 CMO。
+                    </p>
+                </div>
+                <div class="relative pl-8 border-l-2 border-primary/30" data-aos="fade-left" data-aos-delay="200">
+                    <div class="absolute w-4 h-4 bg-slate-300 dark:bg-slate-700 rounded-full -left-[9px] top-1"></div>
+                    <span class="text-sm font-bold text-slate-500">2015/06 - 2018/06 </span>
+                    <h4 class="text-xl font-bold mt-1">产品运营 | 广东某在线教育企业</h4>
+                    <p class="text-slate-500 mt-2 text-sm">
+                        从零搭建全流程运营服务体系，设计定制化数据报告增值服务，获集团年度优秀员工奖。
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900/50">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-16">专业技术栈</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div data-aos="zoom-in"><i class="fab fa-python text-5xl mb-4"></i><p>Python</p></div>
-                <div data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-react text-5xl mb-4 text-blue-400"></i><p>React</p></div>
-                <div data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-database text-5xl mb-4 text-emerald-500"></i><p>Vector DB</p></div>
-                <div data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-microchip text-5xl mb-4 text-purple-500"></i><p>PyTorch</p></div>
+    <section class="py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div data-aos="fade-right">
+            <h2 class="text-3xl font-bold mb-8">技术与工具</h2>
+            <div class="flex flex-wrap gap-4 text-slate-600 dark:text-slate-300">
+                <span class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-full text-sm">Python (数据分析) [cite: 4]</span>
+                <span class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-full text-sm">Excel / BI系统 </span>
+                <span class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-full text-sm">AI 打标 / 提示词优化 [cite: 4, 10]</span>
+                <span class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-full text-sm">SQL / 数据库设计 [cite: 12]</span>
+            </div>
+        </div>
+        <div data-aos="fade-left">
+            <h2 class="text-3xl font-bold mb-8">教育背景</h2>
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="font-bold text-lg">华南师范大学 | 教育技术学 (本科) [cite: 12]</h4>
+                <p class="text-slate-500 text-sm mt-2">英语六级、计算机二级。主修数据库设计、网络工程、C语言等课程。[cite: 12]</p>
             </div>
         </div>
     </section>
 
+    <section id="contact" class="py-32 px-6 text-center">
+        <div class="max-w-2xl mx-auto glass p-12 rounded-[3rem] shadow-2xl">
+            <h2 class="text-4xl font-bold mb-6">期待与您合作</h2>
+            <p class="text-slate-500 mb-8">欢迎通过表单留下您的项目需求或合作意向</p>
+            <form id="contact-form" class="space-y-4">
+                <input type="text" id="name_input" placeholder="您的姓名" class="w-full p-4 rounded-2xl bg-slate-100 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-primary transition" required>
+                <input type="email" id="email_input" placeholder="您的邮箱" class="w-full p-4 rounded-2xl bg-slate-100 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-primary transition" required>
+                <textarea id="message_input" rows="4" placeholder="说点什么..." class="w-full p-4 rounded-2xl bg-slate-100 dark:bg-slate-900 outline-none focus:ring-2 focus:ring-primary transition" required></textarea>
+                <button type="submit" class="w-full py-4 bg-primary text-white rounded-2xl font-bold hover:shadow-lg transition">发送消息</button>
+            </form>
+            <div id="success-msg" class="hidden mt-4 text-emerald-500 font-bold">消息已收到！我会尽快回复。</div>
+        </div>
+    </section>
 
-    <form id="contact-form" class="space-y-4 relative z-10">
-    <input type="text" id="name_input" placeholder="您的姓名" class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition" required>
-    <input type="email" id="email_input" placeholder="您的邮箱" class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition" required>
-    <textarea id="message_input" rows="4" placeholder="项目需求..." class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition" required></textarea>
-    <button type="submit" class="w-full py-4 bg-primary text-white rounded-2xl font-bold hover:shadow-xl hover:shadow-primary/40 transition duration-300">提交意向</button>
-</form>
-<div id="success-msg" class="hidden text-center p-4 bg-emerald-500/10 text-emerald-500 rounded-2xl mt-4">
-    感谢您的信任！需求已收到，我会尽快与您联系。
-</div>
-
-    <footer class="py-12 text-center text-slate-400 text-xs tracking-[0.2em] uppercase">
-        &copy; 2026 Crafted by Gemini for AI Innovators
+    <footer class="py-12 text-center text-slate-400 text-xs tracking-widest uppercase">
+        &copy; 2026 FISHGOR | AI Data Product Expert
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // 初始化动画库
-        AOS.init({ once: true });
-
-        // 主题切换逻辑
+        AOS.init({ duration: 800, once: true });
+        
+        // 主题切换
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
-
         themeToggle.addEventListener('click', () => {
             html.classList.toggle('dark');
             localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
         });
-
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             html.classList.add('dark');
         }
+
+        
         const contactForm = document.getElementById('contact-form');
         const successMsg = document.getElementById('success-msg');
         
@@ -189,7 +227,7 @@
                 console.error(error);
             });
         });
+        });
     </script>
 </body>
 </html>
-
