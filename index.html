@@ -126,17 +126,16 @@
         </div>
     </section>
 
-    <section id="contact" class="py-32 px-6">
-        <div class="max-w-xl mx-auto glass p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
-            <h2 class="text-3xl font-bold mb-8 relative z-10">开始新的合作</h2>
-            <form class="space-y-4 relative z-10">
-                <input type="text" placeholder="您的姓名" class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition">
-                <input type="email" placeholder="您的邮箱" class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition">
-                <textarea rows="4" placeholder="项目需求..." class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition"></textarea>
-                <button class="w-full py-4 bg-primary text-white rounded-2xl font-bold hover:shadow-xl hover:shadow-primary/40 transition duration-300">提交意向</button>
-            </form>
-        </div>
-    </section>
+
+    <form id="contact-form" class="space-y-4 relative z-10">
+    <input type="text" id="name_input" placeholder="您的姓名" class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition" required>
+    <input type="email" id="email_input" placeholder="您的邮箱" class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition" required>
+    <textarea id="message_input" rows="4" placeholder="项目需求..." class="w-full p-4 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 focus:border-primary outline-none transition" required></textarea>
+    <button type="submit" class="w-full py-4 bg-primary text-white rounded-2xl font-bold hover:shadow-xl hover:shadow-primary/40 transition duration-300">提交意向</button>
+</form>
+<div id="success-msg" class="hidden text-center p-4 bg-emerald-500/10 text-emerald-500 rounded-2xl mt-4">
+    感谢您的信任！需求已收到，我会尽快与您联系。
+</div>
 
     <footer class="py-12 text-center text-slate-400 text-xs tracking-[0.2em] uppercase">
         &copy; 2026 Crafted by Gemini for AI Innovators
@@ -159,6 +158,38 @@
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             html.classList.add('dark');
         }
+        const contactForm = document.getElementById('contact-form');
+        const successMsg = document.getElementById('success-msg');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+        
+            // 1. 替换为你的 Google Form 提交地址
+            // 注意：把链接末尾的 /viewform 改为 /formResponse
+            const G_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeJo4irUWQMv9bK4U5uIAYZaJlcDr7ozt7mfMS_uPtH8vIxAQ/formResponse";
+        
+            // 2. 构造表单数据 (替换 entry.xxx 为你实际获取的 ID)
+            const formData = new FormData();
+            formData.append("entry.7984245", document.getElementById('name_input').value); // 姓名 ID
+            formData.append("entry.1416778703", document.getElementById('email_input').value); // 邮箱 ID
+            formData.append("entry.2063026345", document.getElementById('message_input').value); // 需求 ID
+        
+            // 3. 使用 fetch 发送数据 (mode: 'no-cors' 是必须的)
+            fetch(G_FORM_URL, {
+                method: "POST",
+                mode: "no-cors",
+                body: formData
+            }).then(() => {
+                // 提交成功后的 UI 交互
+                contactForm.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+                contactForm.reset();
+            }).catch(error => {
+                alert("提交出现问题，请稍后再试。");
+                console.error(error);
+            });
+        });
     </script>
 </body>
 </html>
+
